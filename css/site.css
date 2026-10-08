@@ -225,6 +225,9 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .bio .role { font-size: 0.85rem; color: var(--accent-ink); font-weight: 600; margin: 4px 0 12px; }
 .bio p + p { margin-top: 10px; }
 .bio .cred { font-size: 0.9rem; color: var(--ink-3); }
+.bio-links { display: flex; gap: 16px; font-size: 0.88rem; font-weight: 600; }
+.bio-links a { color: var(--accent-ink); text-decoration: none; }
+.bio-links a:hover { text-decoration: underline; }
 @media (max-width: 860px) { .bios { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .bio { grid-template-columns: 1fr; } .bio img { width: 88px; height: 88px; } }
 
