@@ -9,11 +9,10 @@ The consulting site for Otian AI LLC: Jack and Jett helping small businesses use
   AI the owner already uses, and checking what they pay for software.
 - Price the monthly "someone to call" plan. The page shows `[Price to set]` in two places (the
   services card and the price card), and otianai.com's FACTS.md gets a row for the figure first.
-- On otianai.com, merge `consulting-site-links` the day this site answers. It points every Services
-  and Work With Us link here and turns `services/`, `consulting/` and `guided-setup/` into redirects.
-  The same day, because the Terms' guided-sessions link changed: set the Terms' `data-terms-version`
-  and "Last updated" to that day, run `python3 scripts/archive-terms.py`, and bump `TERMS_VERSION`
-  in Archie's next release.
+- otianai.com already points here (its main, 2026-10-08): every Services and Work With Us link,
+  the Consulting menu row, and redirects from `services/`, `consulting/` and `guided-setup/`. Until
+  this site is published those links lead nowhere, so publish this before pushing otianai.com, or
+  revert that change.
 
 ## Publishing
 
