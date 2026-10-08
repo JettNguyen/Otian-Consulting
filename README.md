@@ -5,8 +5,9 @@ The consulting site for Otian AI LLC: Jack and Jett helping small businesses use
 
 ## Before it goes live
 
-- Jett and Jack confirm three offers the page makes: visits around Dallas-Fort Worth, setting up an
-  AI the owner already uses, and checking what they pay for software.
+- Jett and Jack confirm three offers the page makes: Jack's visits around Dallas-Fort Worth (Jett
+  is in Florida and joins on Zoom), setting up an AI the owner already uses, and checking what
+  they pay for software.
 - Price the monthly "someone to call" plan. The page shows `[Price to set]` in two places (the
   services card and the price card), and otianai.com's FACTS.md gets a row for the figure first.
 - otianai.com already points here (its main, 2026-10-08): every Services and Work With Us link,
