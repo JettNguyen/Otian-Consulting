@@ -2,7 +2,7 @@
    Same family as otianai.com: its tokens, Georgia over Inter, the terracotta. Its own layout,
    because the job differs: that site sells software and ends on a download, this one sells two
    people and ends on a booked call. Left-aligned editorial headings, the people in the first
-   screen, one dark band for the client story, and the booking button in the header throughout.
+   screen, the reviews as a collection that grows, and the booking button in the header throughout.
    The color values are otianai.com's, copied (css/styles.css :root and [data-theme="dark"]);
    if the brand moves there, move it here. */
 
@@ -197,22 +197,6 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .service p { color: var(--ink-2); }
 @media (max-width: 760px) { .services { grid-template-columns: 1fr; } }
 
-/* Patrick's story: the one dark band */
-.story { background: var(--band); color: var(--band-ink); padding: 96px 0; }
-.story h2 { color: var(--band-ink); }
-.story .eyebrow { color: var(--accent); }
-.story-in { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
-.story-who { color: var(--band-ink-2); margin-top: 18px; }
-.story-body { display: grid; gap: 28px; }
-.story-step { border-left: 2px solid rgba(243, 240, 237, 0.18); padding-left: 22px; }
-.story-step .tag { font: 600 0.75rem/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--band-ink-2); margin-bottom: 10px; }
-.story-step p:last-child { color: var(--band-ink); }
-.story-step:nth-child(2) { border-left-color: var(--accent); }
-.story-quote { margin: 8px 0 0; }
-.story-quote p { font: italic 600 clamp(1.6rem, 3vw, 2.2rem)/1.25 var(--serif); color: var(--band-ink); }
-.story-quote footer { margin-top: 12px; color: var(--band-ink-2); font-size: 0.92rem; }
-@media (max-width: 860px) { .story { padding: 64px 0; } .story-in { grid-template-columns: 1fr; gap: 36px; } }
-
 /* How it goes */
 .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; counter-reset: none; }
 .steps li { border-top: 2px solid var(--line); padding-top: 22px; }
@@ -228,6 +212,7 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
   background: var(--bg-alt); color: var(--ink-2); font-size: 0.95rem; display: grid; gap: 8px;
 }
 .limits li::marker { color: var(--accent-ink); }
+.section--alt .limits { background: var(--card); border: 1px solid var(--line); }
 @media (max-width: 760px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
 
 /* About us */
@@ -240,14 +225,26 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .bio .role { font-size: 0.85rem; color: var(--accent-ink); font-weight: 600; margin: 4px 0 12px; }
 .bio p + p { margin-top: 10px; }
 .bio .cred { font-size: 0.9rem; color: var(--ink-3); }
-.said { margin: 40px 0 0; max-width: 760px; }
-.said blockquote { margin: 0; }
-.said blockquote p { font: italic 400 1.3rem/1.5 var(--serif); color: var(--ink); }
-.said figcaption { display: flex; align-items: center; gap: 12px; margin-top: 16px; font-size: 0.92rem; color: var(--ink-3); }
-.said figcaption img { width: 40px; height: 40px; border-radius: 50%; }
-.said a { color: var(--ink-2); }
 @media (max-width: 860px) { .bios { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .bio { grid-template-columns: 1fr; } .bio img { width: 88px; height: 88px; } }
+
+/* Reviews: one card per client, added as they come */
+.reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.review {
+  margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px;
+}
+.review blockquote { margin: 0; }
+.review blockquote p { font: italic 400 1.2rem/1.55 var(--serif); color: var(--ink); }
+.review figcaption { display: flex; align-items: center; gap: 12px; font-size: 0.9rem; color: var(--ink-3); }
+.review figcaption img, .review-initial { width: 44px; height: 44px; border-radius: 50%; flex: none; }
+.review-initial {
+  display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink);
+  font: 600 1.05rem/1 var(--serif);
+}
+.review figcaption b { display: block; color: var(--ink); font-weight: 600; }
+.review figcaption a { color: var(--ink-2); }
+@media (max-width: 760px) { .reviews { grid-template-columns: 1fr; } }
 
 /* Pricing */
 .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }

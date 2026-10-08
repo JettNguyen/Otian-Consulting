@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=20261008-1" />
+  <link rel="stylesheet" href="css/site.css?v=20261008-2" />
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -39,7 +39,7 @@
       </a>
       <nav class="top-links" aria-label="Sections">
         <a href="#services">What we do</a>
-        <a href="#story">Patrick&rsquo;s story</a>
+        <a href="#reviews">Reviews</a>
         <a href="#about">About us</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
@@ -118,33 +118,7 @@
       </div>
     </section>
 
-    <!-- Every sentence in this band is Patrick's, from his testimonial on otianai.com/testimonials/,
-         word for word. The before and the after are his own two paragraphs, split. -->
-    <section class="story" id="story" aria-labelledby="story-h">
-      <div class="wrap story-in">
-        <div class="story-head">
-          <p class="eyebrow">Patrick&rsquo;s story</p>
-          <h2 id="story-h">How Patrick handles failed card payments now.</h2>
-          <p class="story-who">Patrick West, of Chem Can Services and Westway Site Services, named his agent Coleman.</p>
-        </div>
-        <div class="story-body">
-          <div class="story-step">
-            <p class="tag">Before</p>
-            <p>&ldquo;In the past, when those transactions failed, I would have to gather each customer&rsquo;s email address and send individual emails notifying them of the situation.&rdquo;</p>
-          </div>
-          <div class="story-step">
-            <p class="tag">Now</p>
-            <p>&ldquo;With Coleman, I can copy and paste each email address, and he constructs the email and prepares an individual message for each customer. Once I approve them, Coleman sends all of the emails.&rdquo;</p>
-          </div>
-          <blockquote class="story-quote">
-            <p>&ldquo;This process saves me hours of work.&rdquo;</p>
-            <footer>Patrick West</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="how" aria-labelledby="how-h">
+    <section class="section section--alt" id="how" aria-labelledby="how-h">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">How it goes</p>
@@ -175,7 +149,7 @@
       </div>
     </section>
 
-    <section class="section section--alt" id="about" aria-labelledby="about-h">
+    <section class="section" id="about" aria-labelledby="about-h">
       <div class="wrap">
         <div class="head">
           <p class="eyebrow">About us</p>
@@ -202,15 +176,40 @@
             </div>
           </article>
         </div>
-        <figure class="said">
-          <blockquote>
-            <p>&ldquo;Jett and Jack visually walked me through the initial set-up, although it was quite intuitive. Their instructions were clear and they were responsive and supportive every step of the way.&rdquo;</p>
-          </blockquote>
-          <figcaption>
-            <img src="assets/jehan.jpg" width="240" height="240" alt="" loading="lazy" />
-            <span>Jehan Ramadan, <a href="https://www.bestofhue.com/" rel="noopener">Best of Hue Color Analysis</a></span>
-          </figcaption>
-        </figure>
+      </div>
+    </section>
+
+    <!-- Reviews, the collection Jett asked for on 2026-10-08 in place of a story band near the
+         top: one card per client, added as they come. Every quote is word for word from
+         otianai.com/testimonials/ and is never trimmed inside the marks. Each hours figure is the
+         client's own estimate and is never added to another one. -->
+    <section class="section section--alt" id="reviews" aria-labelledby="reviews-h">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Reviews</p>
+          <h2 id="reviews-h">What Patrick and Jehan say.</h2>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <blockquote>
+              <p>&ldquo;I would estimate that I am saving two to three hours per day on ordinary tasks that Coleman now handles for me, including bulk emails, building reports, and generating email responses.&rdquo;</p>
+            </blockquote>
+            <figcaption>
+              <span class="review-initial" aria-hidden="true">P</span>
+              <span><b>Patrick West</b>Chem Can Services &middot; Westway Site Services. Coleman is the name he gave his agent.</span>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <blockquote>
+              <p>&ldquo;Jett and Jack visually walked me through the initial set-up, although it was quite intuitive. Their instructions were clear and they were responsive and supportive every step of the way.&rdquo;</p>
+            </blockquote>
+            <figcaption>
+              <img src="assets/jehan.jpg" width="240" height="240" alt="" loading="lazy" />
+              <span><b>Jehan Ramadan</b><a href="https://www.bestofhue.com/" rel="noopener">Best of Hue Color Analysis</a></span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="aside"><a href="https://otianai.com/testimonials/">Read both in full</a></p>
       </div>
     </section>
 
