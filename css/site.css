@@ -3,6 +3,8 @@
    because the job differs: that site sells software and ends on a download, this one sells two
    people and ends on a booked call. Left-aligned editorial headings, the people in the first
    screen, the reviews as a collection that grows, and the booking button in the header throughout.
+   One background the whole way down: sections are set apart by space, not color bands or borders,
+   and the closing call is the one block of color (Jett, 2026-10-08).
    The color values are otianai.com's, copied (css/styles.css :root and [data-theme="dark"]);
    if the brand moves there, move it here. */
 
@@ -161,7 +163,7 @@ h3 { font-size: 1.25rem; }
 }
 
 /* Proof strip */
-.strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-alt); }
+.strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .strip-in { display: grid; grid-template-columns: repeat(3, 1fr); }
 .strip-item {
   display: flex; align-items: center; gap: 12px; padding: 20px 24px 20px 0;
@@ -179,7 +181,6 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 
 /* Sections */
 .section { padding: 96px 0; }
-.section--alt { background: var(--bg-alt); }
 .head { max-width: 760px; margin-bottom: 48px; }
 .sub { color: var(--ink-2); margin-top: 16px; font-size: 1.05rem; }
 .aside { margin-top: 36px; color: var(--ink-2); max-width: 46em; }
@@ -189,7 +190,7 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 /* What we do: numbered cards, two by two */
 .services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .service {
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--card); border-radius: var(--radius);
   padding: 30px 30px 32px; position: relative;
 }
 .service .num { display: block; font: 600 1rem/1 var(--serif); color: var(--accent-ink); margin-bottom: 18px; letter-spacing: 0.04em; }
@@ -207,19 +208,15 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 }
 .steps h3 { margin-bottom: 8px; }
 .steps p { color: var(--ink-2); }
-.limits {
-  margin: 44px 0 0; padding: 22px 24px 22px 44px; border-radius: var(--radius);
-  background: var(--bg-alt); color: var(--ink-2); font-size: 0.95rem; display: grid; gap: 8px;
-}
+.limits { margin: 44px 0 0; padding-left: 20px; color: var(--ink-2); font-size: 0.95rem; display: grid; gap: 8px; }
 .limits li::marker { color: var(--accent-ink); }
-.section--alt .limits { background: var(--card); border: 1px solid var(--line); }
 @media (max-width: 760px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
 
 /* About us */
 .bios { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .bio {
   display: grid; grid-template-columns: 112px 1fr; gap: 22px; align-items: start;
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px;
+  background: var(--card); border-radius: var(--radius); padding: 28px;
 }
 .bio img { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; }
 .bio .role { font-size: 0.85rem; color: var(--accent-ink); font-weight: 600; margin: 4px 0 12px; }
@@ -235,7 +232,7 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .review {
   margin: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px;
-  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px;
+  background: var(--card); border-radius: var(--radius); padding: 30px;
 }
 .review blockquote { margin: 0; }
 .review blockquote p { font: italic 400 1.2rem/1.55 var(--serif); color: var(--ink); }
@@ -251,8 +248,8 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 
 /* Pricing */
 .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
-.price { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
-.price--main { border: 2px solid var(--accent); box-shadow: var(--shadow); }
+.price { background: var(--card); border: 2px solid transparent; border-radius: var(--radius); padding: 28px; }
+.price--main { border-color: var(--accent); box-shadow: var(--shadow); }
 .price h3 { font-size: 1.1rem; }
 .amount { font: 600 2.2rem/1.1 var(--serif); margin: 14px 0 10px; }
 .amount span { font: 500 1rem/1 var(--sans); color: var(--ink-3); }
@@ -275,17 +272,31 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .faq details p { padding: 0 0 22px; color: var(--ink-2); max-width: 40em; }
 .faq a { color: var(--accent-ink); }
 
-/* Closing call */
-.cta { background: var(--accent-soft); padding: 88px 0; }
-.cta-in { text-align: center; display: grid; justify-items: center; gap: 14px; }
+/* Closing call: a rounded panel inside the margins, the page's one block of color */
+.cta { padding-bottom: 96px; }
+.cta-in {
+  background: var(--accent-soft); border-radius: 24px; padding: 88px 24px;
+  text-align: center; display: grid; justify-items: center; gap: 14px;
+}
 .cta p { color: var(--ink-2); font-size: 1.1rem; margin-bottom: 14px; }
+@media (max-width: 640px) { .cta { padding-bottom: 64px; } .cta-in { padding: 56px 20px; } }
 
 /* Footer */
-.foot { padding: 40px 0 48px; border-top: 1px solid var(--line); }
-.foot-in { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 20px 40px; }
+.foot { padding: 8px 0 48px; overflow-x: clip; }
+.foot-in {
+  display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 20px 40px;
+  container-type: inline-size;
+}
 .foot-brand { font: 400 1.05rem/1.3 var(--serif); }
 .foot-note, .foot-copy { font-size: 0.88rem; color: var(--ink-3); margin-top: 4px; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .foot-links a { font-size: 0.92rem; color: var(--ink-2); text-decoration: none; }
 .foot-links a:hover { color: var(--ink); text-decoration: underline; }
 .foot-copy { flex-basis: 100%; }
+/* The name, set to the full width of the page, a shade off the background. */
+.foot-mark {
+  flex-basis: 100%; margin: 12px 0 -4px; text-align: center;
+  font: 700 35.5cqi/0.9 var(--serif); letter-spacing: -0.01em;
+  color: color-mix(in srgb, var(--ink) 9%, var(--bg));
+  user-select: none;
+}
