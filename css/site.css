@@ -261,8 +261,36 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 /* Your own app: real screens from apps we built, as the proof beside the offer */
 .shots { margin: 0 0 56px; }
 .shots-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 880px; }
-.shot { margin: 0; }
-.shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); }
+.shot { margin: 0; container-type: inline-size; }
+/* The phone: the screen kit's bezel (06 - Marketing/Brand Assets/archie-screen-kit.html, .device),
+   scaled to these iPhone 17 Pro captures, whose screen is 402 points wide, so the device is 416.
+   Every size is a share of that width in cqw (5 wall, 2 chamfer, 55 screen corner, a 96 by 30
+   island 14 below the glass's top edge, its 14 lens 20 right of center), so the frame keeps its
+   shape at any size. A simulator capture has no island, so it is drawn here, over the status
+   bar's empty middle, the way the hardware sits over the screen. */
+.phone {
+  position: relative; padding: 1.2cqw; border: 0.48cqw solid transparent; border-radius: 14.9cqw;
+  background:
+    linear-gradient(148deg, #4A4A46 0%, #1B1B19 16%, #0B0B0A 42%, #080807 58%, #1B1B19 84%, #45453F 100%) padding-box,
+    conic-gradient(from -40deg, #E6E6E2 0deg, #B4B4AE 38deg, #5A5A55 92deg, #262624 160deg, #191917 200deg, #3E3E3A 252deg, #A2A29C 318deg, #E6E6E2 360deg) border-box;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.45), inset 0 2px 3px rgba(255, 255, 255, 0.26),
+    inset 0 -2px 3px rgba(255, 255, 255, 0.13), inset 2px 0 3px rgba(255, 255, 255, 0.1),
+    inset -2px 0 3px rgba(255, 255, 255, 0.1),
+    0 18px 40px rgba(0, 0, 0, 0.22), 0 4px 12px rgba(0, 0, 0, 0.16);
+}
+.phone img { display: block; width: 100%; height: auto; border-radius: 13.22cqw; }
+.phone::after {
+  content: ""; position: absolute; left: 50%; transform: translateX(-50%); top: 4.57cqw;
+  width: 23.08cqw; height: 7.21cqw; border-radius: 3.6cqw; background: #000;
+  box-shadow: inset 0 0 0 0.5px rgba(255, 255, 255, 0.07);
+}
+.phone::before {
+  content: ""; position: absolute; z-index: 1; left: 50%; margin-left: 4.81cqw; top: 6.49cqw;
+  width: 3.37cqw; height: 3.37cqw; border-radius: 50%;
+  background: radial-gradient(circle at 36% 32%, #243040 0%, #0C0F14 56%, #050609 100%);
+  box-shadow: inset 0 0 0 0.5px rgba(130, 170, 225, 0.22);
+}
 .shot figcaption { margin-top: 12px; font-size: 0.9rem; color: var(--ink-2); }
 .shots > figcaption { margin-top: 20px; color: var(--ink-2); max-width: 46em; }
 @media (max-width: 640px) {
