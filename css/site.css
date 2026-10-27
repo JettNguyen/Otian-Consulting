@@ -255,6 +255,20 @@ a.strip-item:hover b { text-decoration: underline; text-decoration-color: var(--
 .amount span { font: 500 1rem/1 var(--sans); color: var(--ink-3); }
 .price p:last-child { color: var(--ink-2); font-size: 0.95rem; }
 @media (max-width: 860px) { .prices { grid-template-columns: 1fr; } }
+.prices--two { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin-top: 44px; }
+@media (max-width: 860px) { .prices--two { grid-template-columns: 1fr; } }
+
+/* Your own app: real screens from apps we built, as the proof beside the offer */
+.shots { margin: 0 0 56px; }
+.shots-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 880px; }
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 26px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--card); }
+.shot figcaption { margin-top: 12px; font-size: 0.9rem; color: var(--ink-2); }
+.shots > figcaption { margin-top: 20px; color: var(--ink-2); max-width: 46em; }
+@media (max-width: 640px) {
+  .shots-row { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 68%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .shot { scroll-snap-align: start; }
+}
 
 /* FAQ: plain details, no script */
 .faq { border-top: 1px solid var(--line-soft); }
